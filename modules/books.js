@@ -1,4 +1,4 @@
 
- const booksArray = [];
+ export let booksArray = [];
 
- export default booksArray;
+ // export {booksArray};

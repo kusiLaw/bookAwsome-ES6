@@ -1,13 +1,14 @@
-import {booksArray} from "./modules/books";
-
+import displayPage from './modules/display.js';
+import addBookToArray from './modules/addBook.js'
+import { getLocalStorage, setLocalStorage } from "./modules/localstore.js";
+import removeBook from './modules/removeList.js';
+// import { DateTime } from "luxon";
 
 const bookForm = document.getElementById('book-form');
 const titleForm = bookForm.elements['title-input'];
 const authorForm = bookForm.elements['author-input'];
 const bookList = document.getElementById('books-list');
-const dateTime = document.getElementById('date-time');
-
-
+// const dateTime = document.getElementById('date-time');
 const contact = document.querySelector('#nav-contact');
 const navList = document.getElementById('nav-list');
 const navAdd = document.getElementById('nav-add');
@@ -16,10 +17,10 @@ const formContainer = document.querySelector('.form-container');
 const contactContainer = document.querySelector('.contact-container');
 
 
-
+let booksArray = ['ytryrt']
 window.addEventListener('load', () => {
-  displayPage();
-  dateTime.innerHTML = getCurrentDate();
+  booksArray = getLocalStorage()
+  displayPage(bookList, booksArray);
   formContainer.style.display = 'none';
   contactContainer.style.display = 'none';
 });
@@ -28,13 +29,13 @@ bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const title = titleForm.value;
   const author = authorForm.value;
+  if(title !== "" && author !== ""){
+   booksArray = addBookToArray(title, author, booksArray);
+   setLocalStorage(booksArray);
+   titleForm.value = '';
+   authorForm.value = '';
+  }
 
-  book.addBookToArray(title, author);
-  book.setLocalStorage();
-  book.displayPage();
-
-  titleForm.value = '';
-  authorForm.value = '';
 });
 
 navList.addEventListener('click', (e) => {
@@ -42,7 +43,8 @@ navList.addEventListener('click', (e) => {
   formContainer.style.display = 'none';
   contactContainer.style.display = 'none';
   listContainer.style.display = 'flex';
-  book.displayPage();
+  booksArray = getLocalStorage()
+  displayPage(bookList, booksArray);
 });
 
 navAdd.addEventListener('click', (e) => {
