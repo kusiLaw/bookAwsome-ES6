@@ -145,25 +145,32 @@ form .style-me {
  border: 5px solid black;
 }
 
-table {
+#books-list{
  border: 4px solid #000;
  display: flex;
  flex-direction: column;
  gap: 15px;
  height: auto;
  width: 100%;
- padding: 5%;
+ padding: 3% 30%;
+ margin-bottom: 5rem;
 }
 
-table tr {
+.book-list-container{
  display: flex;
+ padding: 1px 20%;
  height: auto;
  align-items: center;
- padding: 1px;
  justify-content: space-between;
+ font-size: 1.6rem;
 }
 
-#books-list tbody:nth-child(odd) {
+.book-list-container button{
+ padding: 5px;
+ font-size: 1.4rem;
+}
+
+#books-list .book-list-container:nth-child(odd) {
  background-color: rgb(152, 156, 152);
 }
 

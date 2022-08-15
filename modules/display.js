@@ -7,7 +7,7 @@ const displayPage = (bookList, booksArray) => {
  bookList.innerHTML = '';
  booksArray.forEach((book) => {
  bookList.innerHTML += `
- <div id="${book.Title}-div" >
+ <div id="${book.Title}-div" class="book-list-container">
    <p class="title-col" >"${book.Title}" by ${book.Author}</p>
    <button id="${book.Title}" type="submit" >Remove</button>
  </div>
