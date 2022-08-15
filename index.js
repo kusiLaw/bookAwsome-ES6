@@ -1,8 +1,6 @@
 import displayPage from './modules/display.js';
-import addBookToArray from './modules/addBook.js'
-import { getLocalStorage, setLocalStorage } from "./modules/localstore.js";
-import removeBook from './modules/removeList.js';
-// import { DateTime } from "luxon";
+import addBookToArray from './modules/addBook.js';
+import { getLocalStorage, setLocalStorage } from './modules/localstore.js';
 
 const bookForm = document.getElementById('book-form');
 const titleForm = bookForm.elements['title-input'];
@@ -16,10 +14,9 @@ const listContainer = document.querySelector('.list-container');
 const formContainer = document.querySelector('.form-container');
 const contactContainer = document.querySelector('.contact-container');
 
-
-let booksArray = ['ytryrt']
+let booksArray = [];
 window.addEventListener('load', () => {
-  booksArray = getLocalStorage()
+  booksArray = getLocalStorage();
   displayPage(bookList, booksArray);
   formContainer.style.display = 'none';
   contactContainer.style.display = 'none';
@@ -29,13 +26,12 @@ bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const title = titleForm.value;
   const author = authorForm.value;
-  if(title !== "" && author !== ""){
-   booksArray = addBookToArray(title, author, booksArray);
-   setLocalStorage(booksArray);
-   titleForm.value = '';
-   authorForm.value = '';
+  if (title !== '' && author !== '') {
+    booksArray = addBookToArray(title, author, booksArray);
+    setLocalStorage(booksArray);
+    titleForm.value = '';
+    authorForm.value = '';
   }
-
 });
 
 navList.addEventListener('click', (e) => {
@@ -43,7 +39,7 @@ navList.addEventListener('click', (e) => {
   formContainer.style.display = 'none';
   contactContainer.style.display = 'none';
   listContainer.style.display = 'flex';
-  booksArray = getLocalStorage()
+  booksArray = getLocalStorage();
   displayPage(bookList, booksArray);
 });
 

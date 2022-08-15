@@ -1,6 +1,3 @@
-
-const removeBook = (title, booksArray) =>{
- return booksArray.filter((book) => book.Title !== title);
-}
+const removeBook = (title, booksArray) => booksArray.filter((book) => book.Title !== title);
 
 export default removeBook;
