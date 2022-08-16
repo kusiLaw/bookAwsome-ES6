@@ -1,75 +1,50 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Book Awesome
 
 > Description the project.
 
 
 ## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
+- Html<br />
+- CSS
+   - Flexbox
+- Javascript
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+[https://livedemo.com](https://kusilaw.github.io/bookAwsome-ES6/)
 
 
 
-## Authors
+#### Prerequisite:  
+  - Vscode editor 
+  - Knowldege About HTML,CSS and Javascript Linters
+  - A web browser(chrome, etc)
+  - [Clone](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-fromhttps://www.behance.net/adagio07-github-desktop ) the repository to your local machine
+  - Open index.html file with chrome
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+### Author
+- Lawrence Addai Kusi
+  - Github: [@Githubhandle](https://github.com/kusiLaw)
+  - Twitter: [@Twitterhandle](https://twitter.com/kusilaw)
+  - Linkedin: [Linkedin](https://www.linkedin.com/in/lawrence-kusi-55a662104)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+### :handshake: Contributing
+Contributions, issues, and feature requests are welcome! 
 
-## 🤝 Contributing
+Feel free to check the [issues page](https://github.com/kusiLaw/web-dev-course/issues).
 
-Contributions, issues, and feature requests are welcome!
+### Show your support
+Give a star :star: if you like this project!
 
-Feel free to check the [issues page](../../issues/).
 
-## Show your support
+### Acknowledgments
+Thanks to Microverse \
+Original design idea by [Cindy Shin in Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
 
-Give a ⭐️ if you like this project!
+### 📝 License
+This Project is <a href ="https://opensource.org/licenses/MIT">MIT </a> licensed
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
