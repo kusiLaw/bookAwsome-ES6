@@ -1,3 +1,3 @@
-const displayTime = () =>  new Date();
+const displayTime = () => new Date();
 
 export default displayTime;
