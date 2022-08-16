@@ -1,12 +1,13 @@
 import displayPage from './modules/display.js';
 import addBookToArray from './modules/addBook.js';
 import { getLocalStorage, setLocalStorage } from './modules/localstore.js';
+import mydatetime from './modules/luxon.js';
 
 const bookForm = document.getElementById('book-form');
 const titleForm = bookForm.elements['title-input'];
 const authorForm = bookForm.elements['author-input'];
 const bookList = document.getElementById('books-list');
-// const dateTime = document.getElementById('date-time');
+const dateTime = document.getElementById('date-time');
 const contact = document.querySelector('#nav-contact');
 const navList = document.getElementById('nav-list');
 const navAdd = document.getElementById('nav-add');
@@ -14,7 +15,9 @@ const listContainer = document.querySelector('.list-container');
 const formContainer = document.querySelector('.form-container');
 const contactContainer = document.querySelector('.contact-container');
 
+dateTime.innerHTML = mydatetime();
 let booksArray = [];
+
 window.addEventListener('load', () => {
   booksArray = getLocalStorage();
   displayPage(bookList, booksArray);
