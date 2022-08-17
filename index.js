@@ -1,7 +1,7 @@
 import displayPage from './modules/display.js';
 import addBookToArray from './modules/addBook.js';
 import { getLocalStorage, setLocalStorage } from './modules/localstore.js';
-import displayTime from './modules/luxon.js';
+import { DateTime } from './modules/luxon.js';
 
 const bookForm = document.getElementById('book-form');
 const titleForm = bookForm.elements['title-input'];
@@ -15,7 +15,7 @@ const listContainer = document.querySelector('.list-container');
 const formContainer = document.querySelector('.form-container');
 const contactContainer = document.querySelector('.contact-container');
 
-dateTime.innerHTML = displayTime();
+dateTime.innerHTML = DateTime.now().toFormat('MMMM dd, yyyy hh:mm:ss');
 let booksArray = [];
 
 window.addEventListener('load', () => {
